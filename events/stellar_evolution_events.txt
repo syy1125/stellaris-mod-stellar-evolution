@@ -14,45 +14,136 @@ namespace = stellar_evolution
 planet_event = {
 	id = stellar_evolution.1
 	hide_window = yes
-	location = root
 
 	trigger = {
 		AND = {
-			NOT = { has_planet_flag = stellar_evolution_happened }
 			OR = {
 				is_planet_class = pc_b_star
 				is_planet_class = pc_a_star
 			}
+			NOT = { has_planet_flag = stellar_evolution_happened }
 		}
 	}
-	mean_time_to_happen = {
-		years = 500
-	}
+	mean_time_to_happen = { years = 500 }
 
 	immediate = {
 		set_planet_flag = stellar_evolution_happened
+		planet_event = { id = stellar_evolution.11 }
+	}
+}
+
+# Evolution for F-class stars
+planet_event = {
+	id = stellar_evolution.2
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			is_planet_class = pc_f_star
+			NOT = { has_planet_flag = stellar_evolution_happened }
+		}
+	}
+	mean_time_to_happen = { years = 1000 }
+
+	immediate = {
+		set_planet_flag = stellar_evolution_happened
+		planet_event = { id = stellar_evolution.11 }
+	}
+}
+
+# Evolution for G-class stars
+planet_event = {
+	id = stellar_evolution.3
+	hide_window = yes
+
+	trigger = {
+		AND = {
+			is_planet_class = pc_g_star
+			NOT = { has_planet_flag = stellar_evolution_happened }
+		}
+	}
+	mean_time_to_happen = { years = 2000 }
+
+	immediate = {
+		set_planet_flag = stellar_evolution_happened
+		planet_event = { id = stellar_evolution.11 }
+	}
+}
+
+# To avoid code repetition, unify main sequence to giant evolution event here
+planet_event = {
+	id = stellar_evolution.11
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
 		set_planet_flag = stellar_evolution_giant
+
+		add_modifier = { modifier = evolving_main_sequence }
+		add_deposit = d_physics_10
 
 		every_country = {
 			limit = {
 				is_ai = no
 			}
 			country_event = {
-				id = stellar_evolution.11
+				id = stellar_evolution.21
 			}
+		}
+
+		# In 10 - 15 years, start the actual chain that evolves the star into a red giant.
+		planet_event = {
+			id = stellar_evolution.101
+			days = 3600
+			random = 1800
 		}
 	}
 }
 
-# Associated country events
+# Associated country events informing them of the change
 country_event = {
-	id = stellar_evolution.11
+	id = stellar_evolution.21
 
-	title = stellar_evolution.11.name
-	desc = stellar_evolution.11.desc
+	title = stellar_evolution.21.name
+	desc = stellar_evolution.21.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
 
 	is_triggered_only = yes
+}
+
+country_event = {
+	id = stellar_evolution.22
+
+	# Reuse description - don't need to change anything other than the picture
+	title = stellar_evolution.21.name
+	desc = stellar_evolution.21.desc
+	picture = GFX_evt_star_yellow
+	show_sound = event_solar_fusion
+	location = from
+
+	is_triggered_only = yes
+}
+
+# Star gets closer to evolving
+planet_event = {
+	id = stellar_evolution.101
+	hide_window = yes
+	is_triggered_only = yes
+
+	# Some mods alter the star's class.
+	# As a failsafe, abort if the star no longer belongs to a class that can evolve.
+	trigger = {
+		OR = {
+			is_planet_class = pc_b_star
+			is_planet_class = pc_a_star
+			is_planet_class = pc_f_star
+			is_planet_class = pc_g_star
+		}
+	}
+
+	immediate = {
+
+	}
 }
