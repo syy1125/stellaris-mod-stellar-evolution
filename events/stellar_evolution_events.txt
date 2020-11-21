@@ -1,0 +1,58 @@
+namespace = stellar_evolution
+
+# Architecture
+## Each event chain occupies 1000 ids.
+## Each step in the event chain occupy 100 ids.
+## Each group of events occupy 10 ids.
+
+# Flags Remarks
+## stellar_evolution_happened: A star can only evolve once in a game, because realistically the time interval between stellar evolution events is too long.
+
+# Begin Events section
+
+# Evolution for B-class and A-class stars
+planet_event = {
+	id = stellar_evolution.1
+	hide_window = yes
+	location = root
+
+	trigger = {
+		AND = {
+			NOT = { has_planet_flag = stellar_evolution_happened }
+			OR = {
+				is_planet_class = pc_b_star
+				is_planet_class = pc_a_star
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years = 500
+	}
+
+	immediate = {
+		set_planet_flag = stellar_evolution_happened
+		set_planet_flag = stellar_evolution_giant
+
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = {
+				id = stellar_evolution.11
+			}
+		}
+	}
+}
+
+# Associated country events
+country_event = {
+	id = stellar_evolution.11
+
+	title = stellar_evolution.11.name
+	desc = stellar_evolution.11.desc
+	picture = GFX_evt_star_white
+	show_sound = event_solar_fusion
+	location = from
+
+	is_triggered_only = yes
+}
