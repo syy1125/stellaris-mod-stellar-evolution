@@ -80,6 +80,7 @@ planet_event = {
 		set_planet_flag = stellar_evolution_giant
 
 		add_modifier = { modifier = evolving_main_sequence }
+		clear_deposits = yes
 		add_deposit = d_physics_10
 
 		if = {
@@ -113,7 +114,7 @@ planet_event = {
 	}
 }
 
-# Associated country events informing them of the change
+# Associated country events
 country_event = {
 	id = stellar_evolution.21
 
@@ -158,10 +159,70 @@ planet_event = {
 
 	immediate = {
 		add_deposit = d_physics_10
-		add_deposit = d_physics_10
-		add_deposit = d_physics_10
-		add_deposit = d_physics_10
-		add_deposit = d_engineering_10
-		add_deposit = d_engineering_10
+		add_deposit = d_engineering_5
+
+		while = {
+			count = 5
+			random_list = {
+				10 = {}
+				15 = {
+					add_deposit = d_physics_10
+				}
+				15 = {
+					add_deposit = d_engineering_5
+				}
+				10 = {
+					add_deposit = d_physics_10
+					add_deposit = d_engineering_5
+				}
+			}
+		}
+
+		if = {
+			limit = { is_planet_class = pc_g_star }
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = stellar_evolution.111
+				}
+			}
+		}
+		else = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = stellar_evolution.112
+				}
+			}
+		}
 	}
+}
+
+# Associated country events
+country_event = {
+	id = stellar_evolution.111
+
+	title = stellar_evolution.111.name
+	desc = stellar_evolution.111.desc
+	picture = GFX_evt_star_yellow
+	show_sound = event_solar_fusion
+	location = from
+
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = stellar_evolution.112
+
+	title = stellar_evolution.111.name
+	desc = stellar_evolution.111.desc
+	picture = GFX_evt_star_white
+	show_sound = event_solar_fusion
+	location = from
+
+	is_triggered_only = yes
 }

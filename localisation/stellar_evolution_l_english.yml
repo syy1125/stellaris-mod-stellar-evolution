@@ -1,5 +1,7 @@
 ﻿l_english:
   stellar_evolution.21.name: "Stellar Evolution: Giants"
   stellar_evolution.21.desc: "Based on our observations of [From.GetName], we believe that it is in the process of turning into a red giant.\n\nNeedless to say, this is even rarer than a once-in-a-lifetime opportunity, and our scientists are quite excited to observe the evolution of a main sequence star in action."
+  stellar_evolution.111.name: "Stellar Evolution: Giants"
+  stellar_evolution.111.desc: "Our scientists predict that [From.GetName] will evolve into a red giant in the next few years."
   evolving_main_sequence: "Evolving Main Sequence Star"
   evolving_main_sequence_desc: "This star is evolving into a red giant."
