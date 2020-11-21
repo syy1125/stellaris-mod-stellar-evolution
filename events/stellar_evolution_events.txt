@@ -82,12 +82,25 @@ planet_event = {
 		add_modifier = { modifier = evolving_main_sequence }
 		add_deposit = d_physics_10
 
-		every_country = {
-			limit = {
-				is_ai = no
+		if = {
+			limit = { is_planet_class = pc_g_star }
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = stellar_evolution.21
+				}
 			}
-			country_event = {
-				id = stellar_evolution.21
+		}
+		else = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				country_event = {
+					id = stellar_evolution.22
+				}
 			}
 		}
 
@@ -106,7 +119,7 @@ country_event = {
 
 	title = stellar_evolution.21.name
 	desc = stellar_evolution.21.desc
-	picture = GFX_evt_star_white
+	picture = GFX_evt_star_yellow
 	show_sound = event_solar_fusion
 	location = from
 
@@ -119,7 +132,7 @@ country_event = {
 	# Reuse description - don't need to change anything other than the picture
 	title = stellar_evolution.21.name
 	desc = stellar_evolution.21.desc
-	picture = GFX_evt_star_yellow
+	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
 
@@ -144,6 +157,11 @@ planet_event = {
 	}
 
 	immediate = {
-
+		add_deposit = d_physics_10
+		add_deposit = d_physics_10
+		add_deposit = d_physics_10
+		add_deposit = d_physics_10
+		add_deposit = d_engineering_10
+		add_deposit = d_engineering_10
 	}
 }
