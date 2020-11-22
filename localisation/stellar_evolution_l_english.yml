@@ -1,12 +1,30 @@
 ﻿l_english:
   stellar_evolution.21.name: "Stellar Evolution: Giants"
-  stellar_evolution.21.desc: "Based on our observations of [From.GetName], we believe that it is in the process of turning into a red giant.\n\nNeedless to say, this is even rarer than a once-in-a-lifetime opportunity, and our scientists are quite excited to observe the evolution of a main sequence star in action."
+  stellar_evolution.21.desc: "Based on our observations of §H[From.GetName]§, we believe that it is in the process of turning into a red giant.\n\nNeedless to say, this is even rarer than a once-in-a-lifetime opportunity, and our scientists are quite excited to observe the evolution of a main sequence star in action."
 
   stellar_evolution.111.name: "Stellar Evolution: Giants"
-  stellar_evolution.111.desc: "Our scientists predict that [From.GetName] will evolve into a red giant in the next few years."
+  stellar_evolution.111.desc: "Our scientists predict that §H[From.GetName]§ will evolve into a red giant in the next few years."
 
   stellar_evolution.121.name: "Stellar Evolution: For Science!"
-  stellar_evolution.121.desc: "As the knowledge of [From.GetName]'s imminent evolution spreads, we have been approached by numerous nations requesting access to the star for scientific purposes.\n\nYou can determine how to control access to the star in the policies screen."
+  stellar_evolution.121.desc: "As the knowledge of §H[From.GetName]§'s imminent evolution spreads, we have been approached by numerous nations requesting access to the star for scientific purposes.\n\nYou can determine how to control access to the star in the policies screen."
 
   evolving_main_sequence: "Evolving Main Sequence Star"
   evolving_main_sequence_desc: "This star is evolving into a red giant."
+
+  policy_stellar_evolution_access: "Stellar Evolution Research Access"
+  policy_stellar_evolution_access_desc: "Should a stellar evolution event occur in our borders, other nations are bound to wish to observe. We must decide how to respond to such science teams from other nations."
+  stellar_evolution_access_open: "Open access"
+  stellar_evolution_access_open_name: "$stellar_evolution_access_open$"
+  stellar_evolution_access_open_desc: "Science teams from other nations are allowed to observe the evolving star."
+  stellar_evolution_access_equal_committee: "Science committee"
+  stellar_evolution_access_equal_committee_name: "$stellar_evolution_access_equal_committee$"
+  stellar_evolution_access_equal_committee_desc: "The evolution of a star transcends national boundaries.\n\nWe will establish a dedicated committee to ensure equal access for any science team that wishes to observe, and to facilitate any scientific exchange regarding the evolving star."
+  stellar_evolution_access_federation: "Federation only"
+  stellar_evolution_access_federation_name: "$stellar_evolution_access_federation$"
+  stellar_evolution_access_federation_desc: "Only our federation allies can be trusted with close observation of the evolving star."
+  stellar_evolution_access_research_federation: "Federation only"
+  stellar_evolution_access_research_federation_name: "$stellar_evolution_access_research_federation$"
+  stellar_evolution_access_research_federation_desc: "Only our federation allies can be trusted with close observation of the evolving star."
+  stellar_evolution_access_private: "Closed access"
+  stellar_evolution_access_private_name: "$stellar_evolution_access_private$"
+  stellar_evolution_access_private_desc: "We have spent tremendous effort in claiming these star systems, and we are entitled to the full benefit of any advancements as a result of its observation."

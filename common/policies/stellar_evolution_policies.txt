@@ -1,0 +1,84 @@
+# Notes
+# Base AI weight is 100
+# AI will grab whatever policy has the heighest weight
+
+stellar_evolution_access = {
+	option = {
+		name = "stellar_evolution_access_open"
+	}
+	option = {
+		name = "stellar_evolution_access_equal_committee"
+
+		valid = {
+			is_xenophobe = no
+		}
+
+		ai_weight = {
+			modifier = {
+				factor = 2
+				OR = {
+					is_xenophile = yes
+					is_materialist = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				has_ai_personality_behaviour = multispecies
+			}
+		}
+	}
+	option = {
+		name = "stellar_evolution_access_federation"
+
+		potential = {
+			has_federation = yes
+			federation = {
+				NOT = { has_federation_perk = research_federation_passive }
+			}
+		}
+
+		ai_weight = {
+			weight = 50
+			modifier = {
+				factor = 10
+				is_xenophobe = yes
+			}
+		}
+	}
+	option = {
+		name = "stellar_evolution_access_research_federation"
+
+		potential = {
+			has_federation = yes
+			federation = {
+				has_federation_perk = research_federation_passive
+			}
+		}
+
+		ai_weight = {
+			weight = 50
+			modifier = {
+				factor = 10
+				is_xenophobe = yes
+			}
+		}
+	}
+	option = {
+		name = "stellar_evolution_access_private"
+
+		ai_weight = {
+			modifier = {
+				factor = 2
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 4
+				is_xenophobe = yes
+			}
+			modifier = {
+				factor = 2
+				has_valid_civic = civic_nationalistic_zeal
+			}
+		}
+	}
+}

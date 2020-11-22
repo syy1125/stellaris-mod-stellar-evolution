@@ -200,6 +200,8 @@ planet_event = {
 			}
 		}
 
+		set_global_flag = stellar_evolution_happened
+
 		if = {
 			limit = {
 				has_owner = yes
