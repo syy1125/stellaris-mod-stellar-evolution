@@ -15,11 +15,9 @@ planet_event = {
 	id = stellar_evolution.1
 	hide_window = yes
 
-	pre_trigger = {
-		is_star = yes
-	}
 	trigger = {
 		AND = {
+			is_star = yes
 			OR = {
 				is_planet_class = pc_b_star
 				is_planet_class = pc_a_star
@@ -62,6 +60,8 @@ country_event = {
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
+
+	option = { name = "OK" }
 
 	is_triggered_only = yes
 }
@@ -150,6 +150,8 @@ country_event = {
 	show_sound = event_solar_fusion
 	location = from
 
+	option = { name = "OK" }
+
 	is_triggered_only = yes
 }
 
@@ -160,7 +162,11 @@ country_event = {
 	title = stellar_evolution.121.name
 	desc = stellar_evolution.121.desc
 	picture = GFX_evt_physics_research
-	show_sound = event_factions_01
+	show_sound = event_factions
+
+	option = {
+		name = "stellar_evolution_acknowledged"
+	}
 
 	is_triggered_only = yes
 }
@@ -200,6 +206,8 @@ country_event = {
 	show_sound = event_solar_fusion
 	location = from
 
+	option = { name = "OK" }
+
 	is_triggered_only = yes
 }
 
@@ -229,7 +237,8 @@ planet_event = {
 			}
 		}
 
-		set_planet_size = 60
+		# B-class and A-class stars, by default, spawn at size 20-35
+		change_planet_size = 30
 		while = {
 			count = 10
 			random_list = {

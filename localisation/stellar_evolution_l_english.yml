@@ -11,6 +11,8 @@
   stellar_evolution.211.name: "[From.GetName] Evolves"
   stellar_evolution.211.desc: "Our scientists inform us that §H[From.GetName]§! has evolved and should now be classified as a red giant."
 
+  stellar_evolution_acknowledged: "Acknowledged"
+
   evolving_main_sequence: "Evolving Main Sequence Star"
   evolving_main_sequence_desc: "This star is evolving into a red giant."
 
