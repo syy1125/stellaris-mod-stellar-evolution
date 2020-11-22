@@ -199,10 +199,29 @@ planet_event = {
 				}
 			}
 		}
+
+		if = {
+			limit = {
+				has_owner = yes
+				owner = {
+					is_ai = no
+					NOT = {
+						has_country_flag = stellar_evolution_policy_informed
+					}
+				}
+			}
+			owner = {
+				country_event = {
+					id = stellar_evolution.121
+					days = 10
+				}
+				set_country_flag = stellar_evolution_policy_informed
+			}
+		}
 	}
 }
 
-# Associated country events
+# Broadcast country event for all countries
 country_event = {
 	id = stellar_evolution.111
 
@@ -223,6 +242,18 @@ country_event = {
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
+
+	is_triggered_only = yes
+}
+
+# Country event for the owner being asked to allow other nations to observe
+country_event = {
+	id = stellar_evolution.121
+
+	title = stellar_evolution.121.name
+	desc = stellar_evolution.121.desc
+	picture = GFX_evt_physics_research
+	show_sound = event_factions_01
 
 	is_triggered_only = yes
 }
