@@ -196,7 +196,7 @@ planet_event = {
 				id = stellar_evolution.211
 			}
 		}
-		# Set up 
+		# Set up recursive loop
 		planet_event = {
 			id = stellar_evolution.301
 		}
