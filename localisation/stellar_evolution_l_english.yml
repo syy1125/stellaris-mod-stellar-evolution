@@ -18,7 +18,7 @@
 
   policy_stellar_evolution_access: "Stellar Evolution Research Access"
   policy_stellar_evolution_access_desc: "Should a stellar evolution event occur in our borders, other nations are bound to wish to observe. We must decide how to respond to such science teams from other nations."
-  stellar_evolution_access_open: "Open access"
+  stellar_evolution_access_open: "Open Access"
   stellar_evolution_access_open_name: "$stellar_evolution_access_open$"
   stellar_evolution_access_open_desc: "Science teams from other nations are allowed to observe the evolving star."
   stellar_evolution_access_equal_committee: "Science Committee"

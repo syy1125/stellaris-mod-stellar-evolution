@@ -15,7 +15,7 @@ stellar_evolution_access = {
 			stellar_evolution_access_open
 		}
 		modifier = {
-			all_technology_research_speed = 0.2
+			all_technology_research_speed = 0.15
 			diplo_weight_technology_mult = 0.2
 		}
 	}
@@ -53,7 +53,7 @@ stellar_evolution_access = {
 			has_federation = yes
 		}
 		modifier = {
-			all_technology_research_speed = 0.4
+			all_technology_research_speed = 0.25
 			federation_research_sharing_mult = 0.1
 		}
 		ai_weight = {
@@ -73,7 +73,7 @@ stellar_evolution_access = {
 			is_xenophile = no
 		}
 		modifier = {
-			all_technology_research_speed = 0.5
+			all_technology_research_speed = 0.3
 			planet_jobs_unity_produces_mult = 0.2
 			diplo_weight_technology_mult = -0.1
 		}
