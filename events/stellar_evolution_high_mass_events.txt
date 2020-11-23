@@ -1,38 +1,35 @@
 namespace = stellar_evolution
-
 # Architecture
 ## Each event chain occupies 1000 ids.
 ## Each step in the event chain occupy 100 ids.
 ## Each group of events occupy 10 ids.
-
 # Flags Remarks
 ## stellar_evolution_happened: Prevent the same initiation event from happening multiple times
-
 # Begin Events section
-
 # Evolution for B-class and A-class stars
 planet_event = {
 	id = stellar_evolution.1
 	hide_window = yes
-
 	trigger = {
-		AND = {
-			is_star = yes
-			OR = {
-				is_planet_class = pc_b_star
-				is_planet_class = pc_a_star
-			}
-			NOT = { has_planet_flag = stellar_evolution_happened }
+		is_star = yes
+		OR = {
+			is_planet_class = pc_b_star
+			is_planet_class = pc_a_star
+		}
+		NOT = {
+			has_planet_flag = stellar_evolution_happened
 		}
 	}
-	mean_time_to_happen = { years = 1000 }
-
+	mean_time_to_happen = {
+		years = 1000
+	}
 	immediate = {
 		set_planet_flag = stellar_evolution_happened
-		add_modifier = { modifier = evolving_main_sequence }
+		add_modifier = {
+			modifier = evolving_main_sequence
+		}
 		clear_deposits = yes
 		add_deposit = d_physics_10
-
 		every_country = {
 			limit = {
 				is_ai = no
@@ -41,7 +38,6 @@ planet_event = {
 				id = stellar_evolution.11
 			}
 		}
-
 		# In 10-15 years, start the actual chain that evolves the star into a red giant.
 		planet_event = {
 			id = stellar_evolution.101
@@ -54,15 +50,14 @@ planet_event = {
 # Associated country events
 country_event = {
 	id = stellar_evolution.11
-
 	title = stellar_evolution.11.name
 	desc = stellar_evolution.11.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
-
-	option = { name = "OK" }
-
+	option = {
+		name = "OK"
+	}
 	is_triggered_only = yes
 }
 
@@ -71,7 +66,6 @@ planet_event = {
 	id = stellar_evolution.101
 	hide_window = yes
 	is_triggered_only = yes
-
 	# Some mods alter the star's class.
 	# As a failsafe, abort if the star no longer belongs to a class that can evolve.
 	trigger = {
@@ -80,15 +74,14 @@ planet_event = {
 			is_planet_class = pc_a_star
 		}
 	}
-
 	immediate = {
 		add_deposit = d_physics_10
 		add_deposit = d_engineering_5
-
 		while = {
 			count = 3
 			random_list = {
-				10 = {}
+				10 = {
+				}
 				15 = {
 					add_deposit = d_physics_10
 				}
@@ -101,7 +94,6 @@ planet_event = {
 				}
 			}
 		}
-
 		every_country = {
 			limit = {
 				is_ai = no
@@ -110,9 +102,8 @@ planet_event = {
 				id = stellar_evolution.111
 			}
 		}
-
 		set_global_flag = stellar_evolution_happened
-
+		set_planet_flag = stellar_evolution_active
 		if = {
 			limit = {
 				has_owner = yes
@@ -131,7 +122,6 @@ planet_event = {
 				set_country_flag = stellar_evolution_policy_informed
 			}
 		}
-
 		planet_event = {
 			id = stellar_evolution.201
 			days = 1800
@@ -143,31 +133,27 @@ planet_event = {
 # Broadcast country event for all countries
 country_event = {
 	id = stellar_evolution.111
-
 	title = stellar_evolution.111.name
 	desc = stellar_evolution.111.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
-
-	option = { name = "OK" }
-
+	option = {
+		name = "OK"
+	}
 	is_triggered_only = yes
 }
 
 # Country event for the owner being asked to allow other nations to observe
 country_event = {
 	id = stellar_evolution.121
-
 	title = stellar_evolution.121.name
 	desc = stellar_evolution.121.desc
 	picture = GFX_evt_physics_research
 	show_sound = event_factions
-
 	option = {
 		name = "stellar_evolution_acknowledged"
 	}
-
 	is_triggered_only = yes
 }
 
@@ -176,10 +162,32 @@ planet_event = {
 	id = stellar_evolution.201
 	hide_window = yes
 	is_triggered_only = yes
-
+	trigger = {
+		OR = {
+			is_planet_class = pc_b_star
+			is_planet_class = pc_a_star
+		}
+	}
 	immediate = {
-		set_planet_flag = star_evolving_giant
-
+		add_deposit = d_physics_10
+		add_deposit = d_engineering_5
+		while = {
+			count = 5
+			random_list = {
+				10 = {
+				}
+				15 = {
+					add_deposit = d_physics_10
+				}
+				15 = {
+					add_deposit = d_engineering_5
+				}
+				10 = {
+					add_deposit = d_physics_10
+					add_deposit = d_engineering_5
+				}
+			}
+		}
 		every_country = {
 			limit = {
 				is_ai = no
@@ -188,10 +196,9 @@ planet_event = {
 				id = stellar_evolution.211
 			}
 		}
-
+		# Set up 
 		planet_event = {
 			id = stellar_evolution.301
-			days = 1
 		}
 	}
 }
@@ -199,66 +206,61 @@ planet_event = {
 # Associated country event
 country_event = {
 	id = stellar_evolution.211
-
 	title = stellar_evolution.211.name
 	desc = stellar_evolution.211.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
-
-	option = { name = "OK" }
-
+	option = {
+		name = "OK"
+	}
 	is_triggered_only = yes
 }
 
+# Star evolves - recursive loop
 planet_event = {
 	id = stellar_evolution.301
 	hide_window = yes
 	is_triggered_only = yes
-
+	trigger = {
+		OR = {
+			is_planet_class = pc_b_star
+			is_planet_class = pc_a_star
+		}
+	}
 	immediate = {
-		add_deposit = d_physics_10
-		add_deposit = d_engineering_5
-
-		while = {
-			count = 5
-			random_list = {
-				10 = {}
-				15 = {
-					add_deposit = d_physics_10
+		random_list = {
+			50 = {
+			}
+			50 = {
+				change_planet_size = 1
+			}
+			1 = {
+				modifier = {
+					factor = 0
+					has_planet_flag = stellar_evolution_spectrum_changed
 				}
-				15 = {
-					add_deposit = d_engineering_5
+				change_planet_size = 1
+				if = {
+					limit = {
+						is_planet_class = pc_b_star
+					}
+					change_pc = pc_a_star
 				}
-				10 = {
-					add_deposit = d_physics_10
-					add_deposit = d_engineering_5
+				else_if = {
+					limit = {
+						is_planet_class = pc_a_star
+					}
+					change_pc = pc_f_star
 				}
+				set_planet_flag = stellar_evolution_spectrum_changed
 			}
 		}
-
-		# B-class and A-class stars, by default, spawn at size 20-35
-		change_planet_size = 30
-		while = {
-			count = 10
-			random_list = {
-				20 = {}
-				10 = {
-					change_planet_size = 1
-				}
-				10 = {
-					change_planet_size = -1
-				}
-				5 = {
-					change_planet_size = 2
-				}
-				5 = {
-					change_planet_size = -2
-				}
-			}
-		}
-
-		change_pc = pc_m_giant_star
 		spawn_sun_temperature_effect = yes
+		planet_event = {
+			id = stellar_evolution.301
+			days = 1800
+			random = 1800
+		}
 	}
 }

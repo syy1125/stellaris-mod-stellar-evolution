@@ -3,6 +3,11 @@
 # AI will grab whatever policy has the heighest weight
 
 stellar_evolution_access = {
+	potential = {
+		any_owned_planet = {
+			has_planet_flag = stellar_evolution_active
+		}
+	}
 	option = {
 		name = "stellar_evolution_access_open"
 	}
