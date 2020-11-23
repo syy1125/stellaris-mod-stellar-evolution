@@ -1,31 +1,43 @@
 # Notes
 # Base AI weight is 100
 # AI will grab whatever policy has the heighest weight
-
 stellar_evolution_access = {
 	potential = {
-		any_owned_planet = {
-			has_planet_flag = stellar_evolution_active
+		any_owned_starbase = {
+			solar_system = {
+				has_star_flag = stellar_evolution_active
+			}
 		}
 	}
 	option = {
 		name = "stellar_evolution_access_open"
+		policy_flags = {
+			stellar_evolution_access_open
+		}
+		modifier = {
+			all_technology_research_speed = 0.2
+			diplo_weight_technology_mult = 0.2
+		}
 	}
 	option = {
 		name = "stellar_evolution_access_equal_committee"
-
+		policy_flags = {
+			stellar_evolution_access_equal_committee
+		}
 		valid = {
+			OR = {
+				is_xenophile = yes
+				is_materialist = yes
+			}
 			is_xenophobe = no
 		}
-
+		modifier = {
+			diplo_weight_mult = 0.2
+			diplo_weight_technology_mult = 0.2
+			country_influence_produces_mult = 0.25
+		}
 		ai_weight = {
-			modifier = {
-				factor = 2
-				OR = {
-					is_xenophile = yes
-					is_materialist = yes
-				}
-			}
+			weight = 200
 			modifier = {
 				factor = 2
 				has_ai_personality_behaviour = multispecies
@@ -34,32 +46,16 @@ stellar_evolution_access = {
 	}
 	option = {
 		name = "stellar_evolution_access_federation"
-
+		policy_flags = {
+			stellar_evolution_access_federation
+		}
 		potential = {
 			has_federation = yes
-			federation = {
-				NOT = { has_federation_perk = research_federation_passive }
-			}
 		}
-
-		ai_weight = {
-			weight = 50
-			modifier = {
-				factor = 10
-				is_xenophobe = yes
-			}
+		modifier = {
+			all_technology_research_speed = 0.4
+			federation_research_sharing_mult = 0.1
 		}
-	}
-	option = {
-		name = "stellar_evolution_access_research_federation"
-
-		potential = {
-			has_federation = yes
-			federation = {
-				has_federation_perk = research_federation_passive
-			}
-		}
-
 		ai_weight = {
 			weight = 50
 			modifier = {
@@ -70,7 +66,17 @@ stellar_evolution_access = {
 	}
 	option = {
 		name = "stellar_evolution_access_private"
-
+		policy_flags = {
+			stellar_evolution_access_private
+		}
+		valid = {
+			is_xenophile = no
+		}
+		modifier = {
+			all_technology_research_speed = 0.5
+			planet_jobs_unity_produces_mult = 0.2
+			diplo_weight_technology_mult = -0.1
+		}
 		ai_weight = {
 			modifier = {
 				factor = 2

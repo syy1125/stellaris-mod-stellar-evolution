@@ -1,0 +1,48 @@
+triggered_opinion_stellar_evolution_access_open = {
+	trigger = {
+		from = {
+			has_policy_flag = stellar_evolution_access_open
+		}
+	}
+	opinion = {
+		base = 50
+	}
+}
+
+triggered_opinion_stellar_evolution_access_equal_committee = {
+	trigger = {
+		from = {
+			has_policy_flag = stellar_evolution_access_equal_committee
+		}
+	}
+	opinion = {
+		base = 100
+	}
+}
+
+triggered_opinion_stellar_evolution_access_federation = {
+	trigger = {
+		from = {
+			has_policy_flag = stellar_evolution_access_federation
+		}
+		is_in_federation_with = from
+	}
+	opinion = {
+		base = 100
+	}
+}
+
+triggered_opinion_stellar_evolution_access_private = {
+	trigger = {
+		from = {
+			has_policy_flag = stellar_evolution_access_private
+		}
+	}
+	opinion = {
+		base = -20
+		modifier = {
+			add = -30
+			is_in_federation_with = from
+		}
+	}
+}
