@@ -1,0 +1,68 @@
+wg_stellar_evolution_access = {
+	casus_belli = cb_stellar_evolution_access
+	potential = {
+		always = yes
+	}
+	possible = {
+		always = yes
+	}
+	hide_if_no_cb = yes
+	cede_claims = no
+	threat_multiplier = 0.5
+	surrender_acceptance = -100
+	allowed_peace_offers = {
+		status_quo
+		surrender
+		demand_surrender
+	}
+	on_status_quo = {
+		# If all systems where star evolution is taking place has been conquered,
+		# Then force policy change to open access
+		if = {
+			limit = {
+				from = {
+					NOT = {
+						any_owned_starbase = {
+							solar_system = {
+								has_star_flag = stellar_evolution_active
+							}
+							controller = {
+								NOT = {
+									is_same_value = prevprevprev
+								}
+							}
+						}
+					}
+				}
+			}
+			custom_tooltip = wg_stellar_evolution_access_all_conquered
+			custom_tooltip = wg_stellar_evolution_access_accept
+			set_policy = {
+				policy = stellar_evolution_access
+				option = stellar_evolution_access_open
+				cooldown = yes
+			}
+		}
+	}
+	on_accept = {
+		custom_tooltip = wg_stellar_evolution_access_accept
+		set_policy = {
+			policy = stellar_evolution_access
+			option = stellar_evolution_access_open
+			cooldown = yes
+		}
+	}
+	ai_weight = {
+		weight = 10
+		modifier = {
+			factor = 5
+			is_materialist = yes
+		}
+		modifier = {
+			factor = 10
+			from = {
+				has_policy_flag = stellar_evolution_access_private
+			}
+		}
+	}
+}

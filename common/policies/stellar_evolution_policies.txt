@@ -26,10 +26,15 @@ stellar_evolution_access = {
 		}
 		valid = {
 			OR = {
-				is_xenophile = yes
-				is_materialist = yes
+				AND = {
+					OR = {
+						is_xenophile = yes
+						is_materialist = yes
+					}
+					is_xenophobe = no
+				}
+				has_ethic = ethic_gestalt_consciousness
 			}
-			is_xenophobe = no
 		}
 		modifier = {
 			diplo_weight_mult = 0.2
@@ -39,7 +44,7 @@ stellar_evolution_access = {
 		ai_weight = {
 			weight = 200
 			modifier = {
-				factor = 2
+				factor = 1.5
 				has_ai_personality_behaviour = multispecies
 			}
 		}
@@ -58,9 +63,41 @@ stellar_evolution_access = {
 		}
 		ai_weight = {
 			weight = 50
+			# If a xenophobe can get into a federation, it must really like its federation allies.
+			# So give it a high weight.
 			modifier = {
-				factor = 10
+				weight = 200
 				is_xenophobe = yes
+			}
+		}
+	}
+	option = {
+		name = "stellar_evolution_access_restricted"
+		policy_flags = {
+			stellar_evolution_access_restricted
+		}
+		valid = {
+			NOT = {
+				has_ethic = ethic_fanatic_xenophile
+			}
+		}
+		modifier = {
+			all_technology_research_speed = 0.3
+			planet_jobs_unity_produces_mult = 0.1
+			diplo_weight_technology_mult = -0.1
+		}
+		ai_weight = {
+			modifier = {
+				factor = 1.2
+				is_materialist = yes
+			}
+			modifier = {
+				factor = 1.5
+				is_xenophobe = yes
+			}
+			modifier = {
+				factor = 1.2
+				has_valid_civic = civic_nationalistic_zeal
 			}
 		}
 	}
@@ -70,25 +107,47 @@ stellar_evolution_access = {
 			stellar_evolution_access_private
 		}
 		valid = {
-			is_xenophile = no
+			OR = {
+				AND = {
+					is_xenophobe = yes
+					is_materialist = yes
+				}
+				has_ethic = ethic_gestalt_consciousness
+			}
 		}
 		modifier = {
-			all_technology_research_speed = 0.3
+			all_technology_research_speed = 0.5
 			planet_jobs_unity_produces_mult = 0.2
-			diplo_weight_technology_mult = -0.1
+			diplo_weight_technology_mult = -0.2
 		}
 		ai_weight = {
+			weight = 0
 			modifier = {
-				factor = 2
-				is_materialist = yes
-			}
-			modifier = {
-				factor = 4
+				weight = 100
 				is_xenophobe = yes
 			}
 			modifier = {
 				factor = 2
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			modifier = {
+				factor = 1.2
+				has_valid_civic = civic_technocracy
+			}
+			modifier = {
+				factor = 1.2
 				has_valid_civic = civic_nationalistic_zeal
+			}
+			modifier = {
+				factor = 1.2
+				any_rival_country = {
+					count > 0
+				}
+			}
+			# Purgers (FP, DS, DE) should always choose this
+			modifier = {
+				weight = 10000
+				has_ai_personality_behaviour = purger
 			}
 		}
 	}

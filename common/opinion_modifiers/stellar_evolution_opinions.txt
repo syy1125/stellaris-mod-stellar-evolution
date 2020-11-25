@@ -32,6 +32,21 @@ triggered_opinion_stellar_evolution_access_federation = {
 	}
 }
 
+triggered_opinion_stellar_evolution_access_restricted = {
+	trigger = {
+		from = {
+			has_policy_flag = stellar_evolution_access_restricted
+		}
+	}
+	opinion = {
+		base = -20
+		modifier = {
+			add = -30
+			is_in_federation_with = from
+		}
+	}
+}
+
 triggered_opinion_stellar_evolution_access_private = {
 	trigger = {
 		from = {
@@ -39,9 +54,9 @@ triggered_opinion_stellar_evolution_access_private = {
 		}
 	}
 	opinion = {
-		base = -20
+		base = -500
 		modifier = {
-			add = -30
+			add = -500
 			is_in_federation_with = from
 		}
 	}

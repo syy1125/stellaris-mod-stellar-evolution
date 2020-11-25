@@ -1,0 +1,36 @@
+cb_stellar_evolution_access = {
+	show_in_diplomacy = yes
+	show_notification = yes
+	potential = {
+		is_country_type = default
+		NOT = {
+			is_in_federation_with = from
+		}
+		from = {
+			any_owned_starbase = {
+				solar_system = {
+					has_star_flag = stellar_evolution_active
+				}
+			}
+		}
+	}
+	is_valid = {
+		from = {
+			OR = {
+				has_policy_flag = stellar_evolution_access_restricted
+				has_policy_flag = stellar_evolution_access_private
+			}
+		}
+		NOT = {
+			is_overlord_to = from
+		}
+		OR = {
+			is_subject = no
+			overlord = {
+				NOT = {
+					is_same_value = from
+				}
+			}
+		}
+	}
+}
