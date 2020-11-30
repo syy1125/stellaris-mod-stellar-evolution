@@ -8,7 +8,7 @@ namespace = stellar_evolution
 # Begin Events section
 # Evolution for B-class and A-class stars
 planet_event = {
-	id = stellar_evolution.high_mass.1
+	id = stellar_evolution.1
 	hide_window = yes
 	trigger = {
 		is_star = yes
@@ -47,12 +47,12 @@ planet_event = {
 				is_ai = no
 			}
 			country_event = {
-				id = stellar_evolution.high_mass.11
+				id = stellar_evolution.11
 			}
 		}
 		# In 10-15 years, start the actual chain that evolves the star into a red giant.
 		planet_event = {
-			id = stellar_evolution.high_mass.101
+			id = stellar_evolution.101
 			days = 3600
 			random = 1800
 		}
@@ -61,9 +61,9 @@ planet_event = {
 
 # Associated country events
 country_event = {
-	id = stellar_evolution.high_mass.11
-	title = stellar_evolution.high_mass.11.name
-	desc = stellar_evolution.high_mass.11.desc
+	id = stellar_evolution.11
+	title = stellar_evolution.11.name
+	desc = stellar_evolution.11.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
@@ -75,7 +75,7 @@ country_event = {
 
 # Star gets closer to evolving
 planet_event = {
-	id = stellar_evolution.high_mass.101
+	id = stellar_evolution.101
 	hide_window = yes
 	is_triggered_only = yes
 	# Some mods alter the star's class.
@@ -111,7 +111,7 @@ planet_event = {
 				is_ai = no
 			}
 			country_event = {
-				id = stellar_evolution.high_mass.111
+				id = stellar_evolution.111
 			}
 		}
 		set_global_flag = stellar_evolution_happened
@@ -130,14 +130,14 @@ planet_event = {
 			}
 			owner = {
 				country_event = {
-					id = stellar_evolution.high_mass.121
+					id = stellar_evolution.121
 					days = 10
 				}
 				set_country_flag = stellar_evolution_policy_informed
 			}
 		}
 		planet_event = {
-			id = stellar_evolution.high_mass.201
+			id = stellar_evolution.201
 			days = 1800
 			random = 1800
 		}
@@ -146,9 +146,9 @@ planet_event = {
 
 # Broadcast country event for all countries
 country_event = {
-	id = stellar_evolution.high_mass.111
-	title = stellar_evolution.high_mass.111.name
-	desc = stellar_evolution.high_mass.111.desc
+	id = stellar_evolution.111
+	title = stellar_evolution.111.name
+	desc = stellar_evolution.111.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
@@ -160,9 +160,9 @@ country_event = {
 
 # Country event for the owner being asked to allow other nations to observe
 country_event = {
-	id = stellar_evolution.high_mass.121
-	title = stellar_evolution.high_mass.121.name
-	desc = stellar_evolution.high_mass.121.desc
+	id = stellar_evolution.121
+	title = stellar_evolution.121.name
+	desc = stellar_evolution.121.desc
 	picture = GFX_evt_physics_research
 	show_sound = event_factions
 	option = {
@@ -173,7 +173,7 @@ country_event = {
 
 # Star starts evolving
 planet_event = {
-	id = stellar_evolution.high_mass.201
+	id = stellar_evolution.201
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -207,21 +207,21 @@ planet_event = {
 				is_ai = no
 			}
 			country_event = {
-				id = stellar_evolution.high_mass.211
+				id = stellar_evolution.211
 			}
 		}
 		# Set up recursive loop
 		planet_event = {
-			id = stellar_evolution.high_mass.301
+			id = stellar_evolution.301
 		}
 	}
 }
 
 # Associated country event
 country_event = {
-	id = stellar_evolution.high_mass.211
-	title = stellar_evolution.high_mass.211.name
-	desc = stellar_evolution.high_mass.211.desc
+	id = stellar_evolution.211
+	title = stellar_evolution.211.name
+	desc = stellar_evolution.211.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
@@ -233,7 +233,7 @@ country_event = {
 
 # Star evolves - recursive loop
 planet_event = {
-	id = stellar_evolution.high_mass.301
+	id = stellar_evolution.301
 	hide_window = yes
 	is_triggered_only = yes
 	trigger = {
@@ -272,7 +272,7 @@ planet_event = {
 		}
 		spawn_sun_temperature_effect = yes
 		planet_event = {
-			id = stellar_evolution.high_mass.301
+			id = stellar_evolution.301
 			days = 1800
 			random = 1800
 		}
