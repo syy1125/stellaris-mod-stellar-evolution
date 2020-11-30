@@ -1,4 +1,4 @@
-﻿l_english:
+l_english:
   stellar_evolution.11.name: "Stellar Evolution: Giants"
   stellar_evolution.11.desc: "Based on our observations of §H[From.GetName]§!, we believe that it is in the process of turning into a red giant. Our best estimates indicate that we should see the first visible sign within two decades.\n\nNeedless to say, our scientists are quite excited to observe the evolution of a main sequence star in action."
 
@@ -23,7 +23,7 @@
   stellar_evolution_access_open_desc: "Science teams from other nations are allowed to observe the evolving star."
   stellar_evolution_access_equal_committee: "Science Committee"
   stellar_evolution_access_equal_committee_name: "$stellar_evolution_access_equal_committee$"
-  stellar_evolution_access_equal_committee_desc: "The evolution of a star transcends national boundaries.\n\nWe will establish a dedicated committee to ensure equal access for any science team that wishes to observe, and to facilitate any scientific exchange regarding the evolving star."
+  stellar_evolution_access_equal_committee_desc: "The evolution of a star transcends national boundaries.\n\nWe will establish a dedicated committee to ensure equal access for any science team that wishes to observe, and to facilitate any scientific exchange regarding the evolving star.\n\nThis is bound to elevate our science division to a prestigious position."
   stellar_evolution_access_federation: "Federation Only"
   stellar_evolution_access_federation_name: "$stellar_evolution_access_federation$"
   stellar_evolution_access_federation_desc: "Only our federation allies can be trusted with close observation of the evolving star."
@@ -32,7 +32,7 @@
   stellar_evolution_access_restricted_desc: "The [Root.GetAdj] shall benefit from observation of these evolving stars first and foremost. We will place strict limits on teams from other nations to ensure that is the case."
   stellar_evolution_access_private: "Closed Access"
   stellar_evolution_access_private_name: "$stellar_evolution_access_private$"
-  stellar_evolution_access_private_desc: "We have spent tremendous effort in claiming these star systems. Therefore, none other than us should be allowed close observation of the stars.\n\n§RThis will greatly displease other empires.§!"
+  stellar_evolution_access_private_desc: "We have spent tremendous effort in claiming these star systems. Therefore, none other than us should be allowed close observation of the stars.\n\n§RThis will severly damage our standing with other empires.§!"
 
   triggered_opinion_stellar_evolution_access_open: "Allowed Access to Evolving Stars"
   triggered_opinion_stellar_evolution_access_equal_committee: "Collaboration on Observing Evolving Stars"

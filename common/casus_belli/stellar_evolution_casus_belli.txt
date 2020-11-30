@@ -6,13 +6,6 @@ cb_stellar_evolution_access = {
 		NOT = {
 			is_in_federation_with = from
 		}
-		from = {
-			any_owned_starbase = {
-				solar_system = {
-					has_star_flag = stellar_evolution_active
-				}
-			}
-		}
 	}
 	is_valid = {
 		from = {

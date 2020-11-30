@@ -16,7 +16,8 @@ stellar_evolution_access = {
 		}
 		modifier = {
 			all_technology_research_speed = 0.15
-			diplo_weight_technology_mult = 0.2
+			diplo_weight_technology_mult = 0.4
+			country_base_influence_produces_add = 0.5
 		}
 	}
 	option = {
@@ -37,8 +38,9 @@ stellar_evolution_access = {
 			}
 		}
 		modifier = {
-			diplo_weight_mult = 0.2
-			diplo_weight_technology_mult = 0.2
+			diplo_weight_mult = 0.4
+			diplo_weight_technology_mult = 1
+			country_base_influence_produces_add = 2
 			country_influence_produces_mult = 0.25
 		}
 		ai_weight = {
@@ -84,7 +86,7 @@ stellar_evolution_access = {
 		modifier = {
 			all_technology_research_speed = 0.3
 			planet_jobs_unity_produces_mult = 0.1
-			diplo_weight_technology_mult = -0.1
+			diplo_weight_technology_mult = -0.2
 		}
 		ai_weight = {
 			modifier = {
@@ -108,17 +110,21 @@ stellar_evolution_access = {
 		}
 		valid = {
 			OR = {
+				has_ethic = ethic_fanatic_xenophobe
 				AND = {
 					is_xenophobe = yes
-					is_materialist = yes
+					has_ethic = ethic_fanatic_materialist
 				}
 				has_ethic = ethic_gestalt_consciousness
 			}
 		}
 		modifier = {
 			all_technology_research_speed = 0.5
+			country_base_physics_research_produces_add = 100
+			country_base_society_research_produces_add = 100
+			country_base_engineering_research_produces_add = 100
 			planet_jobs_unity_produces_mult = 0.2
-			diplo_weight_technology_mult = -0.2
+			diplo_weight_technology_mult = -0.4
 		}
 		ai_weight = {
 			weight = 0
