@@ -6,6 +6,7 @@ cb_stellar_evolution_access = {
 		NOT = {
 			is_in_federation_with = from
 		}
+		has_total_war_cb = no
 	}
 	is_valid = {
 		from = {
