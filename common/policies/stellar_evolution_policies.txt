@@ -10,6 +10,15 @@ stellar_evolution_access = {
 		}
 	}
 	option = {
+		name = "stellar_evolution_access_unset"
+		potential = {
+			always = yes
+		}
+		ai_weight = {
+			weight = 0
+		}
+	}
+	option = {
 		name = "stellar_evolution_access_open"
 		policy_flags = {
 			stellar_evolution_access_open
@@ -153,7 +162,7 @@ stellar_evolution_access = {
 			# Purgers (FP, DS, DE) should always choose this
 			modifier = {
 				weight = 10000
-				has_ai_personality_behaviour = purger
+				is_homicidal = yes
 			}
 		}
 	}
