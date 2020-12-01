@@ -37,19 +37,23 @@ wg_stellar_evolution_access = {
 			}
 			custom_tooltip = wg_stellar_evolution_access_all_conquered
 			custom_tooltip = wg_stellar_evolution_access_accept
-			set_policy = {
-				policy = stellar_evolution_access
-				option = stellar_evolution_access_open
-				cooldown = yes
+			from = {
+				set_policy = {
+					policy = stellar_evolution_access
+					option = stellar_evolution_access_open
+					cooldown = yes
+				}
 			}
 		}
 	}
 	on_accept = {
 		custom_tooltip = wg_stellar_evolution_access_accept
-		set_policy = {
-			policy = stellar_evolution_access
-			option = stellar_evolution_access_open
-			cooldown = yes
+		from = {
+			set_policy = {
+				policy = stellar_evolution_access
+				option = stellar_evolution_access_open
+				cooldown = yes
+			}
 		}
 	}
 	ai_weight = {
