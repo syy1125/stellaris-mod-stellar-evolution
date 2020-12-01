@@ -25,3 +25,30 @@ planet_event = {
 		}
 	}
 }
+
+# Country event for the owner being asked to allow other nations to observe
+country_event = {
+	id = stellar_evolution.101
+	title = stellar_evolution.101.name
+	desc = stellar_evolution.101.desc
+	picture = GFX_evt_physics_research
+	show_sound = event_factions
+
+	fire_only_once = yes
+	trigger = {
+		NOT = { has_country_flag = stellar_evolution_mechanics_acknowledged }
+		any_owned_starbase = {
+			solar_system = {
+				has_star_flag = stellar_evolution_active
+			}
+		}
+	}
+
+	immediate = {
+		set_country_flag = stellar_evolution_mechanics_acknowledged
+	}
+
+	option = {
+		name = "stellar_evolution_acknowledged"
+	}
+}

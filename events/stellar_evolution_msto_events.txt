@@ -28,7 +28,7 @@ planet_event = {
 	}
 }
 
-# Associated country events
+# Associated country event
 country_event = {
 	id = stellar_evolution.1011
 	title = stellar_evolution.1011.name
@@ -68,24 +68,6 @@ planet_event = {
 		solar_system = {
 			set_star_flag = stellar_evolution_active
 		}
-		if = {
-			limit = {
-				has_owner = yes
-				owner = {
-					is_ai = no
-					NOT = {
-						has_country_flag = stellar_evolution_policy_informed
-					}
-				}
-			}
-			owner = {
-				country_event = {
-					id = stellar_evolution.1121
-					days = 10
-				}
-				set_country_flag = stellar_evolution_policy_informed
-			}
-		}
 		planet_event = {
 			id = stellar_evolution.1201
 			days = 1800
@@ -104,19 +86,6 @@ country_event = {
 	location = from
 	option = {
 		name = "OK"
-	}
-	is_triggered_only = yes
-}
-
-# Country event for the owner being asked to allow other nations to observe
-country_event = {
-	id = stellar_evolution.1121
-	title = stellar_evolution.1121.name
-	desc = stellar_evolution.1121.desc
-	picture = GFX_evt_physics_research
-	show_sound = event_factions
-	option = {
-		name = "stellar_evolution_acknowledged"
 	}
 	is_triggered_only = yes
 }

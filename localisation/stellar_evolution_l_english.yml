@@ -1,15 +1,15 @@
 ﻿l_english:
-  stellar_evolution.1011.name: "Stellar Evolution: Giants"
-  stellar_evolution.1011.desc: "Based on our observations of §H[From.GetName]§!, we believe that it is in the process of turning into a red giant. Our best estimates indicate that we should see the first visible sign within two decades.\nNeedless to say, our scientists are quite excited to observe the evolution of a main sequence star in action."
+  stellar_evolution.101.name: "Observing Evolving Stars"
+  stellar_evolution.101.desc: "As we now control a site of active stellar evolution, our scientists are eager to observe it in greater detail. We have already received design proposals for a §Y$sm_stellar_evolution_observatory$§! starbase building.\n\nIn addition, there are numerous requests from other nations asking to observe evolving stars in our borders. We should decide how to respond to those requests using the §Y$policy_stellar_evolution_access$§! policy."
 
-  stellar_evolution.1111.name: "Stellar Evolution: Giants"
-  stellar_evolution.1111.desc: "Our scientists predict that §H[From.GetName]§! will evolve into a red giant within a decade."
+  stellar_evolution.1011.name: "[From.GetName] Approaches Main Sequence Turn-Off"
+  stellar_evolution.1011.desc: "Based on observations of §H[From.GetName]§!, we believe that its core has nearly used up all of its hydrogen. Stellar evolution models predict that we should begin to see noticable changes within a decade or two."
 
-  stellar_evolution.1121.name: "Stellar Evolution: Access Control"
-  stellar_evolution.1121.desc: "As the knowledge of §H[From.GetName]§!'s imminent evolution spreads, we have been approached by numerous nations requesting access to the star for scientific purposes.\nYou can determine how to control access to the star in the policies screen."
+  stellar_evolution.1111.name: "Detectable Signs of Stellar Evolution in [From.GetName]"
+  stellar_evolution.1111.desc: "Instruments monitoring §H[From.GetName]§! have confirmed signs of stellar evolution.\n\nNeedless to say, the [Root.GetAdj] scientific community is quite excited to see an evolving star in action."
 
   stellar_evolution.1211.name: "[From.GetName] Begins Leaving The Main Sequence"
-  stellar_evolution.1211.desc: "A ripple of excitement spreads through the [Root.GetAdjective] scientific community today, as §H[From.GetName]§! begins evolving. Although the change is not discernable to the naked eye yet, our high-precision instruments confirm that §H[From.GetName]§! is definitely leaving the main sequence.\nThough high-mass stars evolve relatively fast, it is still a process that happens over hundreds if not thousands of our years, so it's unlikely that we will see any significant changes in the star's color or size over our lifetimes."
+  stellar_evolution.1211.desc: "A ripple of excitement spreads through the [Root.GetAdj] scientific community today, as §H[From.GetName]§! begins evolving. Although the change is not discernable to the naked eye yet, our high-precision instruments confirm that §H[From.GetName]§! is definitely leaving the main sequence.\n\nThough high-mass stars evolve relatively fast, it is still a process that happens over hundreds if not thousands of years, so from our perspective the star would only change slightly in size and color over time.\n\nFortunately, high-mass stars tend to maintain constant luminosity as they traverse the giant branch, so our assets in the system should remain unaffected."
 
   stellar_evolution_acknowledged: "Acknowledged"
 
@@ -21,10 +21,10 @@
   sm_stellar_evolution_observatory_desc: "A science facility dedicated to observing the evolving star.\nIts exact effects are determined by our $policy_stellar_evolution_access$ policy."
 
   policy_stellar_evolution_access: "Stellar Evolution Research Access"
-  policy_stellar_evolution_access_desc: "Should a stellar evolution event occur in our borders, other nations are bound to wish to observe. We must decide how to respond to such science teams from other nations.\nThis will also affect the output of our §Y$sm_stellar_evolution_observatory$§!."
+  policy_stellar_evolution_access_desc: "Should a stellar evolution event occur in our borders, other nations are bound to wish to observe. We must decide how to treat such science teams from other nations.\nThis will also affect the output of our §Y$sm_stellar_evolution_observatory$§!."
   stellar_evolution_access_open: "Open Access"
   stellar_evolution_access_open_name: "$stellar_evolution_access_open$"
-  stellar_evolution_access_open_desc: "Science teams from other nations are allowed to observe the evolving star.\nNo effort is made to assist or hinder those science teams."
+  stellar_evolution_access_open_desc: "Science teams from other nations are allowed to observe the evolving star.\nWe will neither help nor hinder those teams."
   stellar_evolution_access_equal_committee: "Science Committee"
   stellar_evolution_access_equal_committee_name: "$stellar_evolution_access_equal_committee$"
   stellar_evolution_access_equal_committee_desc: "The evolution of a star transcends national boundaries.\nWe will establish a dedicated committee to ensure equal access for any science team that wishes to observe, and to facilitate any scientific exchange regarding the evolving star.\nThis will reduce the research production of any §Y$sm_stellar_evolution_observatory$§! we own, but they will also produce £influence£ §HInfluence§!."
