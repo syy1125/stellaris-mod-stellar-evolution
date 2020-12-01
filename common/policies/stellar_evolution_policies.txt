@@ -3,11 +3,7 @@
 # AI will grab whatever policy has the heighest weight
 stellar_evolution_access = {
 	potential = {
-		any_owned_starbase = {
-			solar_system = {
-				has_star_flag = stellar_evolution_active
-			}
-		}
+		always = yes
 	}
 	option = {
 		name = "stellar_evolution_access_open"
@@ -22,6 +18,13 @@ stellar_evolution_access = {
 		name = "stellar_evolution_access_equal_committee"
 		policy_flags = {
 			stellar_evolution_access_equal_committee
+		}
+		potential = {
+			any_owned_starbase = {
+				solar_system = {
+					has_star_flag = stellar_evolution_active
+				}
+			}
 		}
 		valid = {
 			OR = {
@@ -55,6 +58,11 @@ stellar_evolution_access = {
 		}
 		potential = {
 			has_federation = yes
+			any_owned_starbase = {
+				solar_system = {
+					has_star_flag = stellar_evolution_active
+				}
+			}
 		}
 		modifier = {
 			all_technology_research_speed = 0.1
@@ -79,6 +87,13 @@ stellar_evolution_access = {
 		name = "stellar_evolution_access_restricted"
 		policy_flags = {
 			stellar_evolution_access_restricted
+		}
+		potential = {
+			any_owned_starbase = {
+				solar_system = {
+					has_star_flag = stellar_evolution_active
+				}
+			}
 		}
 		valid = {
 			NOT = {
@@ -108,6 +123,13 @@ stellar_evolution_access = {
 		name = "stellar_evolution_access_private"
 		policy_flags = {
 			stellar_evolution_access_private
+		}
+		potential = {
+			any_owned_starbase = {
+				solar_system = {
+					has_star_flag = stellar_evolution_active
+				}
+			}
 		}
 		valid = {
 			OR = {
