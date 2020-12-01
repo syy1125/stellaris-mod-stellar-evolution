@@ -1,0 +1,27 @@
+# Triggering events that set up the various event chains
+# Event ids 1 - 1000
+namespace = stellar_evolution
+
+planet_event = {
+	id = stellar_evolution.1
+	hide_window = yes
+	trigger = {
+		is_star = yes
+		OR = {
+			is_planet_class = pc_b_star
+			is_planet_class = pc_a_star
+		}
+		NOT = {
+			has_planet_flag = stellar_evolution_happened
+		}
+	}
+	mean_time_to_happen = {
+		years = 1000
+	}
+	immediate = {
+		set_planet_flag = stellar_evolution_happened
+		planet_event = {
+			id = stellar_evolution.1001
+		}
+	}
+}

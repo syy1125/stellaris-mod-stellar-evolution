@@ -1,15 +1,15 @@
 ﻿l_english:
-  stellar_evolution.11.name: "Stellar Evolution: Giants"
-  stellar_evolution.11.desc: "Based on our observations of §H[From.GetName]§!, we believe that it is in the process of turning into a red giant. Our best estimates indicate that we should see the first visible sign within two decades.\n\nNeedless to say, our scientists are quite excited to observe the evolution of a main sequence star in action."
+  stellar_evolution.1011.name: "Stellar Evolution: Giants"
+  stellar_evolution.1011.desc: "Based on our observations of §H[From.GetName]§!, we believe that it is in the process of turning into a red giant. Our best estimates indicate that we should see the first visible sign within two decades.\n\nNeedless to say, our scientists are quite excited to observe the evolution of a main sequence star in action."
 
-  stellar_evolution.111.name: "Stellar Evolution: Giants"
-  stellar_evolution.111.desc: "Our scientists predict that §H[From.GetName]§! will evolve into a red giant within a decade."
+  stellar_evolution.1111.name: "Stellar Evolution: Giants"
+  stellar_evolution.1111.desc: "Our scientists predict that §H[From.GetName]§! will evolve into a red giant within a decade."
 
-  stellar_evolution.121.name: "Stellar Evolution: Access Control"
-  stellar_evolution.121.desc: "As the knowledge of §H[From.GetName]§!'s imminent evolution spreads, we have been approached by numerous nations requesting access to the star for scientific purposes.\n\nYou can determine how to control access to the star in the policies screen."
+  stellar_evolution.1121.name: "Stellar Evolution: Access Control"
+  stellar_evolution.1121.desc: "As the knowledge of §H[From.GetName]§!'s imminent evolution spreads, we have been approached by numerous nations requesting access to the star for scientific purposes.\n\nYou can determine how to control access to the star in the policies screen."
 
-  stellar_evolution.211.name: "[From.GetName] Begins Leaving The Main Sequence"
-  stellar_evolution.211.desc: "A ripple of excitement spreads through the [Root.GetAdjective] scientific community today, as §H[From.GetName]§! begins evolving. Although the change is not discernable to the naked eye yet, our high-precision instruments confirm that §H[From.GetName]§! is definitely leaving the main sequence.\n\nThough high-mass stars evolve relatively fast, it is still a process that happens over hundreds if not thousands of our years, so it's unlikely that we will see any significant changes in the star's color or size over our lifetimes."
+  stellar_evolution.1211.name: "[From.GetName] Begins Leaving The Main Sequence"
+  stellar_evolution.1211.desc: "A ripple of excitement spreads through the [Root.GetAdjective] scientific community today, as §H[From.GetName]§! begins evolving. Although the change is not discernable to the naked eye yet, our high-precision instruments confirm that §H[From.GetName]§! is definitely leaving the main sequence.\n\nThough high-mass stars evolve relatively fast, it is still a process that happens over hundreds if not thousands of our years, so it's unlikely that we will see any significant changes in the star's color or size over our lifetimes."
 
   stellar_evolution_acknowledged: "Acknowledged"
 
