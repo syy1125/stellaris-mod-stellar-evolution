@@ -33,7 +33,7 @@
   stellar_evolution_access_federation_desc: "Only our federation allies can be trusted with close observation of the evolving star."
   stellar_evolution_access_restricted: "Restricted Access"
   stellar_evolution_access_restricted_name: "$stellar_evolution_access_restricted$"
-  stellar_evolution_access_restricted_desc: "The [This.GetAdj] shall benefit from observation of these evolving stars first and foremost. We will place strict limits on teams from other nations to ensure that is the case.\nThis will increase the research production of any §Y$sm_stellar_evolution_observatory$§! we own."
+  stellar_evolution_access_restricted_desc: "The [Root.GetName] shall benefit from observation of these evolving stars first and foremost. We will place strict limits on teams from other nations to ensure that is the case.\nThis will increase the research production of any §Y$sm_stellar_evolution_observatory$§! we own."
   stellar_evolution_access_private: "Closed Access"
   stellar_evolution_access_private_name: "$stellar_evolution_access_private$"
   stellar_evolution_access_private_desc: "We have spent tremendous effort in claiming these star systems. Therefore, none other than us should be allowed close observation of the stars.\nThis will greatly increase the research production of any §Y$sm_stellar_evolution_observatory$§! we own.\n§ROther empires will not be pleased.§!"
