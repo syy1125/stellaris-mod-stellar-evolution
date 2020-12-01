@@ -11,20 +11,6 @@ planet_event = {
 		add_modifier = {
 			modifier = evolving_main_sequence
 		}
-		clear_deposits = yes
-		random_list = {
-			10 = {
-				add_deposit = d_physics_10
-				add_deposit = d_physics_10
-			}
-			10 = {
-				add_deposit = d_physics_10
-				add_deposit = d_physics_5
-			}
-			10 = {
-				add_deposit = d_physics_10
-			}
-		}
 		every_country = {
 			limit = {
 				is_ai = no
@@ -45,8 +31,8 @@ planet_event = {
 # Associated country events
 country_event = {
 	id = stellar_evolution.1011
-	title = stellar_evolution.11.name
-	desc = stellar_evolution.11.desc
+	title = stellar_evolution.1011.name
+	desc = stellar_evolution.1011.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
@@ -70,25 +56,6 @@ planet_event = {
 		}
 	}
 	immediate = {
-		add_deposit = d_physics_10
-		add_deposit = d_engineering_5
-		while = {
-			count = 3
-			random_list = {
-				10 = {
-				}
-				15 = {
-					add_deposit = d_physics_10
-				}
-				15 = {
-					add_deposit = d_engineering_5
-				}
-				10 = {
-					add_deposit = d_physics_10
-					add_deposit = d_engineering_5
-				}
-			}
-		}
 		every_country = {
 			limit = {
 				is_ai = no
@@ -130,8 +97,8 @@ planet_event = {
 # Broadcast country event for all countries
 country_event = {
 	id = stellar_evolution.1111
-	title = stellar_evolution.111.name
-	desc = stellar_evolution.111.desc
+	title = stellar_evolution.1111.name
+	desc = stellar_evolution.1111.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from
@@ -144,8 +111,8 @@ country_event = {
 # Country event for the owner being asked to allow other nations to observe
 country_event = {
 	id = stellar_evolution.1121
-	title = stellar_evolution.121.name
-	desc = stellar_evolution.121.desc
+	title = stellar_evolution.1121.name
+	desc = stellar_evolution.1121.desc
 	picture = GFX_evt_physics_research
 	show_sound = event_factions
 	option = {
@@ -166,25 +133,6 @@ planet_event = {
 		}
 	}
 	immediate = {
-		add_deposit = d_physics_10
-		add_deposit = d_engineering_5
-		while = {
-			count = 5
-			random_list = {
-				10 = {
-				}
-				15 = {
-					add_deposit = d_physics_10
-				}
-				15 = {
-					add_deposit = d_engineering_5
-				}
-				10 = {
-					add_deposit = d_physics_10
-					add_deposit = d_engineering_5
-				}
-			}
-		}
 		every_country = {
 			limit = {
 				is_ai = no
@@ -203,8 +151,8 @@ planet_event = {
 # Associated country event
 country_event = {
 	id = stellar_evolution.1211
-	title = stellar_evolution.211.name
-	desc = stellar_evolution.211.desc
+	title = stellar_evolution.1211.name
+	desc = stellar_evolution.1211.desc
 	picture = GFX_evt_star_white
 	show_sound = event_solar_fusion
 	location = from

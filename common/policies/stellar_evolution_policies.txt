@@ -10,23 +10,12 @@ stellar_evolution_access = {
 		}
 	}
 	option = {
-		name = "stellar_evolution_access_unset"
+		name = "stellar_evolution_access_open"
 		potential = {
 			always = yes
 		}
-		ai_weight = {
-			weight = 0
-		}
-	}
-	option = {
-		name = "stellar_evolution_access_open"
 		policy_flags = {
 			stellar_evolution_access_open
-		}
-		modifier = {
-			all_technology_research_speed = 0.15
-			diplo_weight_technology_mult = 0.4
-			country_base_influence_produces_add = 0.5
 		}
 	}
 	option = {
@@ -47,10 +36,9 @@ stellar_evolution_access = {
 			}
 		}
 		modifier = {
-			diplo_weight_mult = 0.4
-			diplo_weight_technology_mult = 1
+			diplo_weight_mult = 0.2
+			diplo_weight_technology_mult = 0.4
 			country_base_influence_produces_add = 2
-			country_influence_produces_mult = 0.25
 		}
 		ai_weight = {
 			weight = 200
@@ -69,8 +57,7 @@ stellar_evolution_access = {
 			has_federation = yes
 		}
 		modifier = {
-			all_technology_research_speed = 0.25
-			federation_research_sharing_mult = 0.1
+			all_technology_research_speed = 0.1
 		}
 		ai_weight = {
 			weight = 50
@@ -79,6 +66,12 @@ stellar_evolution_access = {
 			modifier = {
 				weight = 200
 				is_xenophobe = yes
+			}
+			# For Determined Exterminators as they can still enter federations.
+			# They probably wouldn't want to push away their allies.
+			modifier = {
+				factor = 100
+				is_homicidal = yes
 			}
 		}
 	}
@@ -93,8 +86,7 @@ stellar_evolution_access = {
 			}
 		}
 		modifier = {
-			all_technology_research_speed = 0.3
-			planet_jobs_unity_produces_mult = 0.1
+			all_technology_research_speed = 0.2
 			diplo_weight_technology_mult = -0.2
 		}
 		ai_weight = {
@@ -128,10 +120,7 @@ stellar_evolution_access = {
 			}
 		}
 		modifier = {
-			all_technology_research_speed = 0.5
-			country_base_physics_research_produces_add = 100
-			country_base_society_research_produces_add = 100
-			country_base_engineering_research_produces_add = 100
+			all_technology_research_speed = 0.2
 			planet_jobs_unity_produces_mult = 0.2
 			diplo_weight_technology_mult = -0.4
 		}
@@ -159,9 +148,9 @@ stellar_evolution_access = {
 					count > 0
 				}
 			}
-			# Purgers (FP, DS, DE) should always choose this
+			# Purgers (FP, DS, DE) should like this a lot
 			modifier = {
-				weight = 10000
+				factor = 10
 				is_homicidal = yes
 			}
 		}

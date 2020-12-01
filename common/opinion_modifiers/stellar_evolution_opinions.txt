@@ -1,14 +1,3 @@
-triggered_opinion_stellar_evolution_access_open = {
-	trigger = {
-		from = {
-			has_policy_flag = stellar_evolution_access_open
-		}
-	}
-	opinion = {
-		base = 50
-	}
-}
-
 triggered_opinion_stellar_evolution_access_equal_committee = {
 	trigger = {
 		from = {
