@@ -47,5 +47,5 @@
   casus_belli_cb_stellar_evolution_access: "Evolving Star"
   war_goal_wg_stellar_evolution_access: "Demand Star Access"
   war_goal_wg_stellar_evolution_access_desc: "War is waged to force the target empire allow science team to observe evolving stars within their borders."
-  wg_stellar_evolution_access_all_conquered: "All systems belonging to §Y[From.GetName]§! where stellar evolution is taking place has been conquered."
+  wg_stellar_evolution_access_all_conquered: "All sites of active stellar evolution belonging to §Y[From.GetName]§! has been conquered."
   wg_stellar_evolution_access_accept: "§Y[From.GetName]§! is forced to open access to the evolving stars within its borders."

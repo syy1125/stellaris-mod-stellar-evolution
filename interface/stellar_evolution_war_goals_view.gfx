@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_wg_stellar_evolution_access"
+		textureFile = "gfx/interface/icons/diplomacy/diplomacy_force_ideology.dds"
+	}
+}
