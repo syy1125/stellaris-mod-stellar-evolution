@@ -6,6 +6,10 @@ triggered_opinion_stellar_evolution_access_equal_committee = {
 	}
 	opinion = {
 		base = 100
+		modifier = {
+			add = 150
+			is_materialist = yes
+		}
 	}
 }
 

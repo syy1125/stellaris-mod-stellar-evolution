@@ -33,8 +33,8 @@ stellar_evolution_observatory = {
 					has_policy_flag = stellar_evolution_access_open
 				}
 			}
-			physics_research = 100
-			engineering_research = 40
+			physics_research = 200
+			engineering_research = 100
 		}
 		produces = {
 			trigger = {
@@ -43,8 +43,8 @@ stellar_evolution_observatory = {
 					has_policy_flag = stellar_evolution_access_equal_committee
 				}
 			}
-			physics_research = 50
-			engineering_research = 20
+			physics_research = 100
+			engineering_research = 50
 			influence = 1
 		}
 		produces = {
@@ -54,8 +54,8 @@ stellar_evolution_observatory = {
 					has_policy_flag = stellar_evolution_access_federation
 				}
 			}
-			physics_research = 100
-			engineering_research = 40
+			physics_research = 250
+			engineering_research = 125
 		}
 		produces = {
 			trigger = {
@@ -64,8 +64,8 @@ stellar_evolution_observatory = {
 					has_policy_flag = stellar_evolution_access_restricted
 				}
 			}
-			physics_research = 200
-			engineering_research = 100
+			physics_research = 400
+			engineering_research = 200
 			unity = 50
 		}
 		produces = {
@@ -75,9 +75,9 @@ stellar_evolution_observatory = {
 					has_policy_flag = stellar_evolution_access_private
 				}
 			}
-			physics_research = 500
-			engineering_research = 200
-			unity = 100
+			physics_research = 800
+			engineering_research = 400
+			unity = 250
 		}
 
 		upkeep = {
