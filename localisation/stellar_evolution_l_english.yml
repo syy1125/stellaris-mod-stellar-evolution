@@ -1,4 +1,4 @@
-l_english:
+﻿l_english:
   stellar_evolution.101.name: "Observing Evolving Stars"
   stellar_evolution.101.desc: "As we now control a site of active stellar evolution, our scientists are eager to observe it in greater detail. We have already received design proposals for a §Y$sm_stellar_evolution_observatory$§! starbase building.\n\nIn addition, there are numerous requests from other nations asking to observe evolving stars in our borders. We should decide how to respond to those requests using the §Y$policy_stellar_evolution_access$§! policy."
 
@@ -39,6 +39,9 @@ l_english:
   stellar_evolution_access_private: "Closed Access"
   stellar_evolution_access_private_name: "$stellar_evolution_access_private$"
   stellar_evolution_access_private_desc: "We have spent tremendous effort in claiming these star systems. Therefore, none other than us should be allowed close observation of the stars.\nThis will greatly increase the research production of any §Y$sm_stellar_evolution_observatory$§! we own.\n§HA significant amount of our millitary resources is needed to enforce this policy.§!\n§ROther empires will not be pleased.§!"
+  stellar_evolution_access_private_homicidal: "$stellar_evolution_access_private$"
+  stellar_evolution_access_private_homicidal_name: "$stellar_evolution_access_private_name$"
+  stellar_evolution_access_private_homicidal_desc: "We have spent tremendous effort in claiming these star systems. Therefore, none other than us should be allowed close observation of the stars.\nThis will greatly increase the research production of any §Y$sm_stellar_evolution_observatory$§! we own.\n§ROther empires will not be pleased.§!"
 
   triggered_opinion_stellar_evolution_access_open: "Allowed Access to Evolving Stars"
   triggered_opinion_stellar_evolution_access_equal_committee: "Collaboration on Observing Evolving Stars"

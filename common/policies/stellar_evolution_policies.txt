@@ -20,6 +20,7 @@ stellar_evolution_access = {
 			stellar_evolution_access_equal_committee
 		}
 		potential = {
+			is_homicidal = no
 			any_owned_starbase = {
 				solar_system = {
 					has_star_flag = stellar_evolution_active
@@ -36,6 +37,10 @@ stellar_evolution_access = {
 					is_xenophobe = no
 				}
 				has_ethic = ethic_gestalt_consciousness
+			}
+			custom_tooltip = {
+				fail_text = requires_diplo_stance_cooperative
+				has_policy_flag = diplo_stance_cooperative
 			}
 		}
 		modifier = {
@@ -90,6 +95,7 @@ stellar_evolution_access = {
 			stellar_evolution_access_restricted
 		}
 		potential = {
+			is_homicidal = no
 			any_owned_starbase = {
 				solar_system = {
 					has_star_flag = stellar_evolution_active
@@ -127,6 +133,7 @@ stellar_evolution_access = {
 			stellar_evolution_access_private
 		}
 		potential = {
+			is_homicidal = no
 			any_owned_starbase = {
 				solar_system = {
 					has_star_flag = stellar_evolution_active
@@ -175,11 +182,36 @@ stellar_evolution_access = {
 					count > 0
 				}
 			}
-			# Purgers (FP, DS, DE) should like this a lot
-			modifier = {
-				factor = 10
-				is_homicidal = yes
+		}
+	}
+	# Special option for purgers that doesn't negatively impact this as much
+	option = {
+		name = "stellar_evolution_access_private_homicidal"
+		policy_flags = {
+			stellar_evolution_access_private
+		}
+		potential = {
+			is_homicidal = yes
+			any_owned_starbase = {
+				solar_system = {
+					has_star_flag = stellar_evolution_active
+				}
 			}
+		}
+		valid = {
+			# If you're homicidal what else do you need?
+			always = yes
+		}
+		modifier = {
+			all_technology_research_speed = 0.3
+			planet_jobs_unity_produces_mult = 0.2
+			diplo_weight_technology_mult = -0.4
+			starbases_upkeep_mult = 0.1
+			ships_upkeep_mult = 0.1
+		}
+		ai_weight = {
+			# Purgers (FP, DS, DE) should like this a lot
+			weight = 1000
 		}
 	}
 }
