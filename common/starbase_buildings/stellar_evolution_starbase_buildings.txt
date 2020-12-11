@@ -75,8 +75,8 @@ stellar_evolution_observatory = {
 					has_policy_flag = stellar_evolution_access_private
 				}
 			}
-			physics_research = 800
-			engineering_research = 400
+			physics_research = 1000
+			engineering_research = 500
 			unity = 250
 		}
 

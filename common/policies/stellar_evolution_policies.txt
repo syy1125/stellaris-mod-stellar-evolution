@@ -28,19 +28,18 @@ stellar_evolution_access = {
 			}
 		}
 		valid = {
+			has_policy_flag = diplo_stance_cooperative
 			OR = {
-				AND = {
-					OR = {
-						is_xenophile = yes
-						is_materialist = yes
-					}
-					is_xenophobe = no
-				}
 				has_ethic = ethic_gestalt_consciousness
-			}
-			custom_tooltip = {
-				fail_text = requires_diplo_stance_cooperative
-				has_policy_flag = diplo_stance_cooperative
+				AND = {
+					is_xenophobe = no
+					OR = {
+						has_ethic = ethic_xenophile
+						has_ethic = ethic_fanatic_xenophile
+						has_ethic = ethic_materialist
+						has_ethic = ethic_fanatic_materialist
+					}
+				}
 			}
 		}
 		modifier = {
@@ -141,21 +140,25 @@ stellar_evolution_access = {
 			}
 		}
 		valid = {
+			is_subject = no
 			OR = {
+				has_ethic = ethic_gestalt_consciousness
 				has_ethic = ethic_fanatic_xenophobe
 				AND = {
-					is_xenophobe = yes
+					has_ethic = ethic_xenophobe
 					has_ethic = ethic_fanatic_materialist
 				}
-				has_ethic = ethic_gestalt_consciousness
 			}
 		}
 		modifier = {
-			all_technology_research_speed = 0.4
+			planet_jobs_physics_research_produces_mult = 0.2
+			planet_jobs_society_research_produces_mult = 0.2
+			planet_jobs_engineering_research_produces_mult = 0.2
+			all_technology_research_speed = 0.2
 			planet_jobs_unity_produces_mult = 0.2
 			diplo_weight_technology_mult = -0.4
 			country_naval_cap_mult = -0.4
-			starbases_upkeep_mult = 0.5
+			starbases_upkeep_mult = 1
 			ships_upkeep_mult = 0.5
 		}
 		ai_weight = {
@@ -184,7 +187,7 @@ stellar_evolution_access = {
 			}
 		}
 	}
-	# Special option for purgers that doesn't negatively impact this as much
+	# Special option for purgers that doesn't negatively impact millitary as much
 	option = {
 		name = "stellar_evolution_access_private_homicidal"
 		policy_flags = {
