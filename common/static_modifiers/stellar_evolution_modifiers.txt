@@ -1,4 +1,5 @@
 evolving_main_sequence = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_star.dds"
 	icon_frame = 2
+	important = yes
 }
