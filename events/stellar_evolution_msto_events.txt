@@ -64,7 +64,7 @@ planet_event = {
 				id = stellar_evolution.1111
 			}
 		}
-		set_global_flag = stellar_evolution_happened
+		set_global_flag = stellar_evolution_active
 		solar_system = {
 			set_star_flag = stellar_evolution_active
 		}

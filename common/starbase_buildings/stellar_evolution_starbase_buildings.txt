@@ -5,7 +5,7 @@ stellar_evolution_observatory = {
 
 	potential = {
 		exists = owner
-		has_global_flag = stellar_evolution_happened
+		has_global_flag = stellar_evolution_active
 		owner = { has_technology = tech_sensors_3 }
 	}
 
