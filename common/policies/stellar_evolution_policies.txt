@@ -68,6 +68,14 @@ stellar_evolution_access = {
 					has_star_flag = stellar_evolution_active
 				}
 			}
+			federation = {
+				NOT = {
+					has_federation_perk = research_federation_passive
+				}
+			}
+		}
+		valid = {
+			always = yes
 		}
 		modifier = {
 			all_technology_research_speed = 0.1
@@ -82,6 +90,42 @@ stellar_evolution_access = {
 			}
 			# For Determined Exterminators as they can still enter federations.
 			# They probably wouldn't want to push away their allies.
+			modifier = {
+				factor = 100
+				is_homicidal = yes
+			}
+		}
+	}
+	# Duplicate of the effect above for research federations - keep effects synced!
+	option = {
+		name = "stellar_evolution_access_research_federation"
+		policy_flags = {
+			stellar_evolution_access_research_federation
+		}
+		potential = {
+			has_federation = yes
+			any_owned_starbase = {
+				solar_system = {
+					has_star_flag = stellar_evolution_active
+				}
+			}
+			federation = {
+				has_federation_perk = research_federation_passive
+			}
+		}
+		valid = {
+			always = yes
+		}
+		modifier = {
+			all_technology_research_speed = 0.15
+			country_base_influence_produces_add = 1
+		}
+		ai_weight = {
+			weight = 50
+			modifier = {
+				weight = 200
+				is_xenophobe = yes
+			}
 			modifier = {
 				factor = 100
 				is_homicidal = yes
@@ -107,7 +151,7 @@ stellar_evolution_access = {
 			}
 		}
 		modifier = {
-			all_technology_research_speed = 0.15
+			all_technology_research_speed = 0.2
 			diplo_weight_technology_mult = -0.2
 			country_naval_cap_mult = -0.15
 		}
@@ -154,7 +198,7 @@ stellar_evolution_access = {
 			planet_jobs_physics_research_produces_mult = 0.2
 			planet_jobs_society_research_produces_mult = 0.2
 			planet_jobs_engineering_research_produces_mult = 0.2
-			all_technology_research_speed = 0.2
+			all_technology_research_speed = 0.25
 			planet_jobs_unity_produces_mult = 0.2
 			diplo_weight_technology_mult = -0.4
 			country_naval_cap_mult = -0.4

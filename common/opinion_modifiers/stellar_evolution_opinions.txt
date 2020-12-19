@@ -16,12 +16,15 @@ triggered_opinion_stellar_evolution_access_equal_committee = {
 triggered_opinion_stellar_evolution_access_federation = {
 	trigger = {
 		from = {
-			has_policy_flag = stellar_evolution_access_federation
+			OR = {
+				has_policy_flag = stellar_evolution_access_federation
+				has_policy_flag = stellar_evolution_access_research_federation
+			}
 		}
 		is_in_federation_with = from
 	}
 	opinion = {
-		base = 100
+		base = 200
 	}
 }
 

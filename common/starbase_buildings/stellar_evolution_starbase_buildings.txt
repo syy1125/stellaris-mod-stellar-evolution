@@ -61,6 +61,16 @@ stellar_evolution_observatory = {
 			trigger = {
 				exists = owner
 				owner = {
+					has_policy_flag = stellar_evolution_access_research_federation
+				}
+			}
+			physics_research = 400
+			engineering_research = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
 					has_policy_flag = stellar_evolution_access_restricted
 				}
 			}
