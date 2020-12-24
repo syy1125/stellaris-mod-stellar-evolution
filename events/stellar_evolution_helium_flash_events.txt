@@ -1,0 +1,118 @@
+# M-class giants helium flash event chain
+# Event ids 2001-3000
+namespace = stellar_evolution
+planet_event = {
+	id = stellar_evolution.2001
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		add_modifier = {
+			modifier = pending_helium_flash
+		}
+		every_country = {
+			limit = {
+				is_ai = no
+			}
+			country_event = {
+				id = stellar_evolution.2011
+			}
+		}
+		# In 3-5 years, run the actual event
+		planet_event = {
+			id = stellar_evolution.2101
+			days = 1080
+			random = 720
+		}
+	}
+}
+
+# Inform players to get their ships ready
+country_event = {
+	id = stellar_evolution.2011
+	title = stellar_evolution.2011.name
+	desc = stellar_evolution.2011.desc
+	picture = GFX_evt_star_chart
+	show_sound = event_solar_fusion
+	location = from
+	option = {
+		name = "stellar_evolution_acknowledged"
+	}
+	is_triggered_only = yes
+}
+
+planet_event = {
+	id = stellar_evolution.2101
+	hide_window = yes
+	is_triggered_only = yes
+	immediate = {
+		remove_modifier = pending_helium_flash
+		# Countries that have their ships ready and countries that do not have their ships ready
+		# get separate events
+		every_country = {
+			limit = {
+				is_country_type = default
+				any_owned_fleet = {
+					is_ship_class = shipclass_science_ship
+					exists = leader
+					solar_system = {
+						is_same_value = root.solar_system
+					}
+				}
+			}
+			country_event = {
+				id = stellar_evolution.2111
+			}
+		}
+		every_country = {
+			limit = {
+				is_country_type = default
+				NOT = {
+					any_owned_fleet = {
+						is_ship_class = shipclass_science_ship
+						exists = leader
+						solar_system = {
+							is_same_value = root.solar_system
+						}
+					}
+				}
+			}
+			country_event = {
+				id = stellar_evolution.2112
+			}
+		}
+	}
+}
+
+country_event = {
+	id = stellar_evolution.2111
+	title = stellar_evolution.2111.name
+	desc = stellar_evolution.2111.desc
+	picture = GFX_evt_physics_research
+	show_sound = event_solar_fusion
+	location = from
+	option = {
+		name = "FANTASTIC"
+		add_resource = {
+			physics_research = 1000
+			engineering_research = 1000
+		}
+		add_modifier = {
+			modifier = helium_flash_inspired
+			days = 1800
+		}
+	}
+	is_triggered_only = yes
+}
+
+country_event = {
+	id = stellar_evolution.2112
+	title = stellar_evolution.2112.name
+	desc = stellar_evolution.2112.desc
+	picture = GFX_evt_physics_research
+	show_sound = event_solar_fusion
+	location = from
+	option = {
+		name = "OK"
+	}
+	is_triggered_only = yes
+}

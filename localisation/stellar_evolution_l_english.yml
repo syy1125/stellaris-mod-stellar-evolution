@@ -11,10 +11,23 @@
   stellar_evolution.1211.name: "[From.GetName] Begins Leaving The Main Sequence"
   stellar_evolution.1211.desc: "A ripple of excitement spreads through the [Root.GetAdj] scientific community today, as §H[From.GetName]§! begins evolving. Although the change is not discernable to the naked eye yet, our high-precision instruments confirm that §H[From.GetName]§! is definitely leaving the main sequence.\n\nThough high-mass stars evolve relatively fast, it is still a process that happens over hundreds if not thousands of years, so from our perspective the star would only change slightly in size and color over time.\n\nFortunately, high-mass stars tend to maintain constant luminosity as they traverse the giant branch, so our assets in the system should remain unaffected."
 
+  stellar_evolution.2011.name: "Helium Flash Imminent"
+  stellar_evolution.2011.desc: "A recent calculation by leading experts in stellar evolution indicate that §H[From.GetName]§!'s hydrogen shell burning has reached a critical stage. The star is projected to experience a helium flash in the next 3-5 years.\n\n§YIf possible, we should send a fully crewed science ship to the system to observe the event.§!"
+
+  stellar_evolution.2111.name: "Helium Flash Occurs In [From.GetName]"
+  stellar_evolution.2111.desc: "Our science ship in the [From.System.GetName] has just observed a spike of neutrino emissions from [From.GetName], confirming that helium fusion has begun in its core.\n\nWhile it is unlikely that the star will exhibit any visible change for centries to come, the data collected from this event has already improved our understanding of the stellar evolution process."
+
+  stellar_evolution.2112.name: "$stellar_evolution.2111.name$"
+  stellar_evolution.2112.desc: "We have received reports confirming that the helium flash has occurred in [From.GetName]."
+
   stellar_evolution_acknowledged: "Acknowledged"
 
   evolving_main_sequence: "Evolving Main Sequence Star"
   evolving_main_sequence_desc: "This star is evolving into a red giant."
+  pending_helium_flash: "Pending Helium Flash"
+  pending_helium_flash_desc: "We predict that this star will undergo helium flash in the near future."
+  helium_flash_inspired: "Helium Flash"
+  helium_flash_inspired_desc: "Observation of the recent helium flash event generated an enormous amount of data that we are still deciphering, and our scientists continue to be inspired by this."
 
   requires_evolving_star: "§RRequires an evolving star in the system§!"
   sm_stellar_evolution_observatory: "Stellar Evolution Observatory"

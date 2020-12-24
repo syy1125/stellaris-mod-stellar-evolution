@@ -3,3 +3,15 @@ evolving_main_sequence = {
 	icon_frame = 2
 	important = yes
 }
+
+pending_helium_flash = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_star.dds"
+	icon_frame = 2
+	important = yes
+}
+
+helium_flash_inspired = {
+	all_technology_research_speed = 0.10
+	country_physics_tech_research_speed = 0.10
+	country_engineering_tech_research_speed = 0.10
+}

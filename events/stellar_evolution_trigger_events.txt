@@ -2,6 +2,8 @@
 # Event ids 1 - 1000
 namespace = stellar_evolution
 
+# Evolution events
+## High mass MSTO
 planet_event = {
 	id = stellar_evolution.1
 	hide_window = yes
@@ -25,6 +27,33 @@ planet_event = {
 		}
 	}
 }
+
+## M-class giant helium flash
+## In game, M-class red giants are described as medium-mass stars and therefore do not go supernova.
+planet_event = {
+	id = stellar_evolution.2
+	hide_window = yes
+	trigger = {
+		is_planet_class = pc_m_giant_star
+		NOT = {
+			has_planet_flag = helium_flash_happened
+			solar_system = {
+				has_star_flag = guardian
+			}
+		}
+	}
+	mean_time_to_happen = {
+		years = 500
+	}
+	immediate = {
+		set_planet_flag = helium_flash_happened
+		planet_event = {
+			id = stellar_evolution.2001
+		}
+	}
+}
+
+
 
 # Country event for the owner being asked to allow other nations to observe
 country_event = {
