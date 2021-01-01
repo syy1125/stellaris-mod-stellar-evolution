@@ -1,7 +1,6 @@
 # Triggering events that set up the various event chains
 # Event ids 1 - 1000
 namespace = stellar_evolution
-
 # Evolution events
 ## High mass MSTO
 planet_event = {
@@ -21,9 +20,15 @@ planet_event = {
 		years = 1000
 	}
 	immediate = {
-		set_planet_flag = stellar_evolution_happened
-		planet_event = {
-			id = stellar_evolution.1001
+		random_list = {
+			99 = {
+			}
+			1 = {
+				set_planet_flag = stellar_evolution_happened
+				planet_event = {
+					id = stellar_evolution.1001
+				}
+			}
 		}
 	}
 }
@@ -46,14 +51,18 @@ planet_event = {
 		years = 500
 	}
 	immediate = {
-		set_planet_flag = helium_flash_happened
-		planet_event = {
-			id = stellar_evolution.2001
+		random_list = {
+			99 = {
+			}
+			1 = {
+				set_planet_flag = helium_flash_happened
+				planet_event = {
+					id = stellar_evolution.2001
+				}
+			}
 		}
 	}
 }
-
-
 
 # Country event for the owner being asked to allow other nations to observe
 country_event = {
@@ -62,21 +71,20 @@ country_event = {
 	desc = stellar_evolution.101.desc
 	picture = GFX_evt_physics_research
 	show_sound = event_factions
-
 	fire_only_once = yes
 	trigger = {
-		NOT = { has_country_flag = stellar_evolution_mechanics_acknowledged }
+		NOT = {
+			has_country_flag = stellar_evolution_mechanics_acknowledged
+		}
 		any_owned_starbase = {
 			solar_system = {
 				has_star_flag = stellar_evolution_active
 			}
 		}
 	}
-
 	immediate = {
 		set_country_flag = stellar_evolution_mechanics_acknowledged
 	}
-
 	option = {
 		name = "stellar_evolution_acknowledged"
 	}
