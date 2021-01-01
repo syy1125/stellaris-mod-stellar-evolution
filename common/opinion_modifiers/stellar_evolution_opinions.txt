@@ -3,6 +3,7 @@ triggered_opinion_stellar_evolution_access_equal_committee = {
 		from = {
 			has_policy_flag = stellar_evolution_access_equal_committee
 		}
+		NOT = { is_country_type = fallen_empire }
 	}
 	opinion = {
 		base = 100
@@ -21,6 +22,7 @@ triggered_opinion_stellar_evolution_access_federation = {
 				has_policy_flag = stellar_evolution_access_research_federation
 			}
 		}
+		NOT = { is_country_type = fallen_empire }
 		is_in_federation_with = from
 	}
 	opinion = {
@@ -33,6 +35,7 @@ triggered_opinion_stellar_evolution_access_restricted = {
 		from = {
 			has_policy_flag = stellar_evolution_access_restricted
 		}
+		NOT = { is_country_type = fallen_empire }
 	}
 	opinion = {
 		base = -20
@@ -48,6 +51,7 @@ triggered_opinion_stellar_evolution_access_private = {
 		from = {
 			has_policy_flag = stellar_evolution_access_private
 		}
+		NOT = { is_country_type = fallen_empire }
 	}
 	opinion = {
 		base = -500
