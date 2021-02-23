@@ -31,7 +31,7 @@
 
   requires_evolving_star: "§RRequires an evolving star in the system§!"
   sm_stellar_evolution_observatory: "Stellar Evolution Observatory"
-  sm_stellar_evolution_observatory_desc: "A science facility dedicated to observing the evolving star.\nIts exact effects are determined by our $policy_stellar_evolution_access$ policy."
+  sm_stellar_evolution_observatory_desc: "A science facility dedicated to observing the evolving star.\nIts exact effects are determined by our $policy_stellar_evolution_access$ policy.\nIts science output scales greatly with improved sensor technology."
 
   policy_stellar_evolution_access: "Stellar Evolution Research Access"
   policy_stellar_evolution_access_desc: "Should a stellar evolution event occur in our borders, other nations are bound to wish to observe. We must decide how to treat such science teams from other nations.\nThis will also affect the output of our §Y$sm_stellar_evolution_observatory$§!."

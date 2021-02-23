@@ -6,7 +6,7 @@ stellar_evolution_observatory = {
 	potential = {
 		exists = owner
 		has_global_flag = stellar_evolution_active
-		owner = { has_technology = tech_sensors_3 }
+		owner = { has_technology = tech_sensors_2 }
 	}
 
 	possible = {
@@ -20,82 +20,213 @@ stellar_evolution_observatory = {
 		}
 	}
 
+	show_in_tech = "tech_sensors_2"
+
 	resources = {
 		category = starbase_buildings
 		cost = {
 			alloys = 150
 		}
 
+		# Open access block
 		produces = {
 			trigger = {
 				exists = owner
-				owner = {
-					has_policy_flag = stellar_evolution_access_open
-				}
+				owner = { has_policy_flag = stellar_evolution_access_open }
 			}
-			physics_research = 200
-			engineering_research = 100
+			physics_research = 40
+			engineering_research = 20
 		}
 		produces = {
 			trigger = {
 				exists = owner
 				owner = {
-					has_policy_flag = stellar_evolution_access_equal_committee
+					has_policy_flag = stellar_evolution_access_open
+					has_technology = "tech_sensors_3"
 				}
 			}
-			physics_research = 100
-			engineering_research = 50
+			physics_research = 80
+			engineering_research = 40
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = stellar_evolution_access_open
+					has_technology = "tech_sensors_4"
+				}
+			}
+			physics_research = 80
+			engineering_research = 40
+		}
+
+		# Equal committee access block
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = stellar_evolution_access_equal_committee }
+			}
+			physics_research = 20
+			engineering_research = 10
 			influence = 1
 		}
 		produces = {
 			trigger = {
 				exists = owner
 				owner = {
-					has_policy_flag = stellar_evolution_access_federation
+					has_policy_flag = stellar_evolution_access_equal_committee
+					has_technology = "tech_sensors_3"
 				}
 			}
-			physics_research = 250
-			engineering_research = 125
+			physics_research = 40
+			engineering_research = 20
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = stellar_evolution_access_equal_committee
+					has_technology = "tech_sensors_4"
+				}
+			}
+			physics_research = 40
+			engineering_research = 20
+		}
+
+		# Federation access block
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = stellar_evolution_access_federation }
+			}
+			physics_research = 50
+			engineering_research = 25
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = stellar_evolution_access_federation
+					has_technology = "tech_sensors_3"
+				}
+			}
+			physics_research = 100
+			engineering_research = 50
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = stellar_evolution_access_federation
+					has_technology = "tech_sensors_4"
+				}
+			}
+			physics_research = 100
+			engineering_research = 50
+		}
+
+		# Research federation access block
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = stellar_evolution_access_research_federation }
+			}
+			physics_research = 80
+			engineering_research = 40
 		}
 		produces = {
 			trigger = {
 				exists = owner
 				owner = {
 					has_policy_flag = stellar_evolution_access_research_federation
+					has_technology = "tech_sensors_3"
 				}
 			}
-			physics_research = 400
-			engineering_research = 200
+			physics_research = 160
+			engineering_research = 80
 		}
 		produces = {
 			trigger = {
 				exists = owner
 				owner = {
-					has_policy_flag = stellar_evolution_access_restricted
+					has_policy_flag = stellar_evolution_access_research_federation
+					has_technology = "tech_sensors_4"
 				}
 			}
-			physics_research = 400
-			engineering_research = 200
+			physics_research = 160
+			engineering_research = 80
+		}
+
+		# Restricted access block
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = stellar_evolution_access_restricted }
+			}
+			physics_research = 80
+			engineering_research = 40
 			unity = 50
 		}
 		produces = {
 			trigger = {
 				exists = owner
 				owner = {
-					has_policy_flag = stellar_evolution_access_private
+					has_policy_flag = stellar_evolution_access_restricted
+					has_technology = "tech_sensors_3"
 				}
 			}
-			physics_research = 1000
-			engineering_research = 500
+			physics_research = 160
+			engineering_research = 80
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = stellar_evolution_access_restricted
+					has_technology = "tech_sensors_4"
+				}
+			}
+			physics_research = 160
+			engineering_research = 80
+		}
+
+		# Private access block
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_policy_flag = stellar_evolution_access_private }
+			}
+			physics_research = 200
+			engineering_research = 100
 			unity = 250
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = stellar_evolution_access_private
+					has_technology = "tech_sensors_3"
+				}
+			}
+			physics_research = 400
+			engineering_research = 200
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_policy_flag = stellar_evolution_access_private
+					has_technology = "tech_sensors_4"
+				}
+			}
+			physics_research = 400
+			engineering_research = 200
 		}
 
 		upkeep = {
 			energy = 5
 		}
 	}
-
-	show_in_tech = "tech_sensors_3"
 
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = yes
