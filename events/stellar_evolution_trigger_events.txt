@@ -64,7 +64,7 @@ planet_event = {
 	}
 }
 
-# Country event for the owner being asked to allow other nations to observe
+# Info event describing the main mechanics of this mod
 country_event = {
 	id = stellar_evolution.101
 	title = stellar_evolution.101.name
